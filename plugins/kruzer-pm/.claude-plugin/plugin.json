@@ -1,0 +1,9 @@
+{
+  "name": "kruzer-pm",
+  "version": "0.1.0",
+  "description": "Skills de Product Management da Kruzer — auto-detecta e aplica o artefato certo (PRD, Feature Brief, Priorização, Roadmap, Discovery e mais) com base na task descrita.",
+  "author": {
+    "name": "Felipe Martins / Kruzer"
+  },
+  "keywords": ["product-management", "prd", "roadmap", "discovery", "kruzer"]
+}

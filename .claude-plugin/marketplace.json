@@ -1,0 +1,24 @@
+{
+  "name": "kruzer-product-management",
+  "owner": {
+    "name": "Felipe Martins",
+    "email": "felipe.martins@kruzer.ai"
+  },
+  "metadata": {
+    "description": "Plugin de Product Management da Kruzer com skills para PRD, Feature Brief, Priorização, Roadmap, Discovery e muito mais. Auto-detecta a metodologia certa com base na task.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "kruzer-pm",
+      "source": "./plugins/kruzer-pm",
+      "description": "Skills de PM da Kruzer — PRD, Feature Brief, Priorização, Roadmap, Discovery, User Stories e mais.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Felipe Martins",
+        "email": "felipe.martins@kruzer.ai"
+      },
+      "keywords": ["product-management", "prd", "roadmap", "discovery", "kruzer"]
+    }
+  ]
+}
