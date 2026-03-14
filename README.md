@@ -1,38 +1,64 @@
-# Kruzer Product Management Plugin
+# kruzer-pm
 
-Marketplace de plugins de Product Management da Kruzer. Contém o plugin `kruzer-pm` com 21 skills de PM que o Claude Code identifica e aplica automaticamente com base na task descrita.
+Plugin de Product Management para o time da Kruzer. Contém todas as skills de PM — o Claude identifica automaticamente qual usar com base na task descrita, sem necessidade de invocar manualmente.
 
-## Instalação
+## Como funciona
 
-No Claude Code, rode:
+Basta descrever o que você precisa em linguagem natural. O Claude lê a descrição da task e ativa a skill mais adequada. Por exemplo:
 
-```
-/plugin marketplace add Martinskruzer/product-management
-/plugin install kruzer-pm@kruzer-product-management
-```
+- "quero escrever o PRD do novo módulo de Convênios" → ativa `prd`
+- "me ajuda a priorizar o backlog do squad OMS" → ativa `priorizacao`
+- "preciso criar as user stories para essa feature" → ativa `user-stories`
+- "vamos planejar o discovery do problema X" → ativa `discovery-brief`
 
 ## Skills incluídas
 
-| Skill | Quando é ativada |
-|-------|-----------------|
-| `prd` | Escrever PRD de iniciativa complexa |
-| `feature-brief` | Especificar feature com escopo claro |
-| `priorizacao` | Priorizar backlog ou iniciativas |
-| `product-roadmap` | Criar ou atualizar roadmap |
-| `user-stories` | Quebrar PRD em user stories / tasks no ClickUp |
-| `discovery-brief` | Planejar etapa de discovery |
+| Skill | Quando usar |
+|-------|-------------|
+| `prd` | Iniciativas novas/complexas pós-discovery |
+| `feature-brief` | Features com escopo claro, sem discovery |
+| `priorizacao` | Sessões de priorização de backlog ou iniciativas |
+| `product-roadmap` | Criar ou atualizar o roadmap trimestral/semestral |
+| `user-stories` | Quebrar PRD/Feature Brief em tasks para ClickUp |
+| `discovery-brief` | Planejar a etapa de discovery |
 | `discovery-report` | Consolidar aprendizados do discovery |
 | `decision-record` | Registrar uma decisão no momento em que é tomada |
 | `decision-log` | Retrospectiva de decisões pós-entrega |
-| `assumption-map` | Mapear premissas com matriz Impacto × Confiança |
-| `experiment-design` | Desenhar experimento lean |
-| `problem-brief` | Qualificar problema antes de alocar recursos |
-| `strategic-bet` | Formalizar aposta estratégica |
+| `assumption-map` | Mapear e priorizar premissas (Impacto × Confiança) |
+| `experiment-design` | Desenhar experimento lean para validar hipótese |
+| `problem-brief` | Qualificar um problema antes de alocar recursos |
+| `strategic-bet` | Formalizar uma aposta estratégica |
 | `north-star-metric` | Definir North Star e árvore de métricas |
-| `outcome-review` | Avaliar se iniciativa entregou o resultado prometido |
-| `changelog` | Documentar entrega de sprint/deploy |
-| `gtm-brief` | Planejar lançamento de produto ou feature |
-| `competitive-battlecard` | Criar battlecard para time comercial |
-| `figma-handoff` | Checklist de handoff Figma → dev |
-| `tech-spec` | Documentar decisão técnica |
-| `kruzer-product-decision` | Meta-skill para qualquer decisão de produto da Kruzer |
+| `outcome-review` | Avaliar se a iniciativa entregou o resultado prometido |
+| `changelog` | Documentar o que foi entregue após deploy/sprint |
+| `gtm-brief` | Planejar o lançamento de produto ou feature |
+| `competitive-battlecard` | Criar battlecard para o time comercial |
+| `figma-handoff` | Checklist de handoff de Figma para dev |
+| `tech-spec` | Documentar decisões técnicas com impacto em produto |
+| `kruzer-product-decision` | Skill mestra — usada para qualquer decisão de produto da Kruzer |
+
+## Instalação no Claude Code
+
+```bash
+claude plugin install kruzer-pm.plugin
+```
+
+Após instalar, as skills ficam disponíveis em todos os projetos automaticamente.
+
+## v0.2.0 — Novas skills e agentes
+
+**Skills adicionadas:**
+| Skill | Quando usar |
+|-------|------------|
+| `business-case` | Justificar investimento em uma iniciativa para liderança |
+| `qbr-deck` | Estruturar apresentação de resultados trimestrais |
+| `value-realization-report` | Avaliar se o cliente percebeu o valor entregue |
+| `portfolio-tradeoff` | Analisar tradeoffs estratégicos entre iniciativas concorrentes |
+| `feedback` | Capturar e recuperar feedback de usuários de forma sistemática |
+
+**Agentes adicionados:**
+| Agente | O que faz |
+|--------|-----------|
+| `discovery-runner` | Recebe um Problem Brief e entrega Discovery Brief + roteiro de entrevistas + guia de dados + checklist de kickoff, de forma autônoma |
+| `sprint-prep` | Recebe um PRD/Feature Brief e cria as user stories completas com critérios de aceite + tasks no ClickUp, de forma autônoma |
+| `competitive-intel` | Pesquisa um concorrente na web e entrega battlecard ou análise de produto, de forma autônoma |
