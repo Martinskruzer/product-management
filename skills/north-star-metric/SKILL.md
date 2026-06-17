@@ -58,7 +58,7 @@ Para a NSM e cada input: qual o valor atual, qual a meta e em quanto tempo.
 
 Pergunte ao usuário qual formato prefere:
 - **HTML Kruzer** ← padrão sugerido — documento visual completo no design system da Kruzer (consulte `design-kruzer.md`)
-- **Markdown** — para colar no ClickUp
+- **Markdown** — para colar no Jira
 - **Google Slides** — para apresentação a stakeholders
 
 ---

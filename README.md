@@ -19,7 +19,7 @@ Basta descrever o que você precisa em linguagem natural. O Claude lê a descri�
 | `feature-brief` | Features com escopo claro, sem discovery |
 | `priorizacao` | Sessões de priorização de backlog ou iniciativas |
 | `product-roadmap` | Criar ou atualizar o roadmap trimestral/semestral |
-| `user-stories` | Quebrar PRD/Feature Brief em tasks para ClickUp |
+| `user-stories` | Quebrar PRD/Feature Brief em tasks para Jira |
 | `discovery-brief` | Planejar a etapa de discovery |
 | `discovery-report` | Consolidar aprendizados do discovery |
 | `decision-record` | Registrar uma decisão no momento em que é tomada |
@@ -60,5 +60,5 @@ Após instalar, as skills ficam disponíveis em todos os projetos automaticament
 | Agente | O que faz |
 |--------|-----------|
 | `discovery-runner` | Recebe um Problem Brief e entrega Discovery Brief + roteiro de entrevistas + guia de dados + checklist de kickoff, de forma autônoma |
-| `sprint-prep` | Recebe um PRD/Feature Brief e cria as user stories completas com critérios de aceite + tasks no ClickUp, de forma autônoma |
+| `sprint-prep` | Recebe um PRD/Feature Brief e cria as user stories completas com critérios de aceite + tasks no Jira, de forma autônoma |
 | `competitive-intel` | Pesquisa um concorrente na web e entrega battlecard ou análise de produto, de forma autônoma |

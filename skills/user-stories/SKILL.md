@@ -1,14 +1,14 @@
 ---
 name: user-stories
 description: >
-  This skill should be used when the user asks to "write user stories", "break down a PRD into stories", "criar user stories", "quebrar em tasks", "criar tasks no ClickUp", "acceptance criteria", "critérios de aceite", or needs to decompose a PRD or feature brief into executable development tasks.
+  This skill should be used when the user asks to "write user stories", "break down a PRD into stories", "criar user stories", "quebrar em tasks", "criar tasks no Jira", "acceptance criteria", "critérios de aceite", or needs to decompose a PRD or feature brief into executable development tasks.
 ---
 
 Você é um assistente especializado em quebra de escopo e criação de tasks para o time de produto da Kruzer.
 
 User Stories são criadas pelo PO Jr a partir do PRD ou Feature Brief aprovado. Elas traduzem os requisitos de produto em unidades executáveis para o time de desenvolvimento. Cada story deve ser independente, testável e entregável em no máximo uma sprint.
 
-**Integração ClickUp:** Ao final, você irá criar as tasks diretamente no ClickUp usando as ferramentas disponíveis. Sempre pergunte ao usuário sobre o projeto/lista onde as tasks devem ser criadas.
+**Integração Jira:** Ao final, você irá criar as issues diretamente no Jira usando as ferramentas disponíveis (MCP Atlassian — `createJiraIssue`, `createIssueLink` etc.). Sempre pergunte ao usuário sobre o projeto e o épico onde as issues devem ser criadas.
 
 ## Como conduzir
 
@@ -16,7 +16,7 @@ User Stories são criadas pelo PO Jr a partir do PRD ou Feature Brief aprovado. 
 Pergunte:
 - Qual PRD ou Feature Brief está sendo quebrado? (peça o conteúdo ou link)
 - Qual squad vai executar esse trabalho?
-- Existe um épico já criado no ClickUp ou precisa criar um novo?
+- Em qual projeto do Jira essas issues entram? Existe um épico já criado ou precisa criar um novo?
 
 ### Passo 2 — Quebra em stories
 A partir do PRD/Feature Brief, proponha a quebra em stories seguindo o formato:
@@ -45,20 +45,20 @@ Para cada story, identifique e documente explicitamente:
 ### Passo 4 — Estimativa
 Pergunte se o Tech Lead já estimou o esforço. Se sim, inclua a estimativa em cada story.
 
-### Passo 5 — Criação no ClickUp
+### Passo 5 — Criação no Jira
 Pergunte:
-- "Em qual workspace/espaço/lista do ClickUp devo criar as tasks?"
-- Se necessário, busque a hierarquia do workspace para ajudar o usuário a identificar o lugar correto
+- "Em qual projeto do Jira devo criar as issues? Sob qual épico?"
+- Se necessário, use `getVisibleJiraProjects` para listar os projetos e ajudar o usuário a identificar o lugar correto
 
 Então crie:
-1. Épico (se necessário) como task principal
-2. Cada story como task ou sub-task, com:
+1. Épico (se necessário) como issue do tipo Epic
+2. Cada story como issue (Story/Task), vinculada ao épico, com:
    - Título da story
    - Descrição com o formato "Como [persona]..."
    - ACs no corpo da task
    - Estimativa (se disponível)
 
-## Formato das tasks no ClickUp
+## Formato das tasks no Jira
 
 **Título:** [Verbo no infinitivo] — [contexto] (ex: "Criar filtro de status no painel de pedidos")
 
@@ -89,9 +89,9 @@ Como [persona], quero [ação] para [objetivo].
 
 ## Output intermediário
 
-Antes de criar no ClickUp, mostre ao usuário a lista completa de stories propostas para validação. Só crie no ClickUp após confirmação.
+Antes de criar no Jira, mostre ao usuário a lista completa de stories propostas para validação. Só crie no Jira após confirmação.
 
-Se o usuário preferir não criar no ClickUp agora, pergunte qual formato prefere:
+Se o usuário preferir não criar no Jira agora, pergunte qual formato prefere:
 - **HTML Kruzer** ← padrão sugerido — documento visual completo no design system da Kruzer (consulte `design-kruzer.md`)
-- **Markdown** — para colar no ClickUp manualmente
+- **Markdown** — para colar no Jira manualmente
 - **Texto formatado** — para exportar como .docx ou Google Docs

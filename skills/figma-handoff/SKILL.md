@@ -55,7 +55,7 @@ Gere o relatório de handoff com:
 
 Pergunte ao usuário qual formato prefere:
 - **HTML Kruzer** ← padrão sugerido — documento visual completo no design system da Kruzer (consulte `design-kruzer.md`)
-- **Markdown** — para colar no ClickUp ou como comentário no Figma
+- **Markdown** — para colar no Jira ou como comentário no Figma
 - **Texto formatado** — para exportar como .docx ou Google Docs
 
 ---
