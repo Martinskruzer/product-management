@@ -52,33 +52,63 @@ Pergunte:
 
 Então crie:
 1. Épico (se necessário) como issue do tipo Epic
-2. Cada story como issue (Story/Task), vinculada ao épico, com:
-   - Título da story
-   - Descrição com o formato "Como [persona]..."
-   - ACs no corpo da task
-   - Estimativa (se disponível)
+2. Cada **História** (no Jira Kruzer o tipo chama-se "História") vinculada ao épico, com a descrição no **formato 5W+H da Kruzer** (ver abaixo). O "Como [persona], quero... para..." vira o resumo/pitch; o corpo segue What/Why/Where/Who/How + Critérios de Aceite + Decisões registradas + Fora de escopo.
+3. Cada **Subtarefa** `[BE]`/`[FE]` vinculada à História (campo parent), no formato de subtarefa (ver abaixo), com estimativa se disponível.
 
-## Formato das tasks no Jira
+## Formato da História no Jira (padrão Kruzer — 5W+H)
 
-**Título:** [Verbo no infinitivo] — [contexto] (ex: "Criar filtro de status no painel de pedidos")
+A descrição da **História** segue a estrutura 5W+H da Kruzer (referência: KOMS-207), nesta ordem. Use exatamente estes headings:
+
+**Título:** [Verbo no infinitivo] — [contexto] (ex: "Criar Lista de Preço")
 
 **Descrição:**
 ```
-## Story
-Como [persona], quero [ação] para [objetivo].
+## What
+[O que é a funcionalidade, em 1-2 frases]
+
+## Why
+[Por que precisa existir — dor ou contexto de negócio]
+
+## Where
+[Onde vive — módulo, tela, endpoint]
+
+## Who
+[Personas/atores que usam ou consomem]
+
+## How
+[Como funciona — fluxo/mecânica em bullets]
+
+## Critérios de Aceite
+### [subseção temática]
+* [critério verificável — use Dado / Quando / Então para fluxos principais]
+
+## Decisões registradas
+* **[decisão]:** [racional ou link para Decision Record / ADR]
+
+## Fora de escopo (backlog de evolução)
+* [item explicitamente adiado — e para onde vai, se aplicável]
+```
+
+As seções **Decisões registradas** e **Fora de escopo** são obrigatórias quando a História nasce de um Feature Brief ou PRD: preservam o racional da decisão e travam scope creep. Um campo que precise ser *buscável/filtrável* costuma cair em "Fora de escopo" da história de dado-livre e virar campo first-class.
+
+## Formato da Subtarefa no Jira ([BE] / [FE])
+
+Subtarefas são fatias de implementação da História. Prefixe com `[BE]` ou `[FE]`; quando houver ordem de ataque, numere (`[BE][01]`, `[BE][02]`...).
+
+**Descrição:**
+```
+## Objetivo
+[O que esta fatia entrega, referenciando a História pai]
 
 ## Acceptance Criteria
 - [ ] Dado que [contexto], quando [ação], então [resultado esperado]
-- [ ] Dado que [contexto], quando [ação], então [resultado esperado]
-- [ ] [bullet verificável complementar]
 
 ## Edge Cases e Cenários de Erro
-- [ ] Quando [condição de erro], então [comportamento esperado]
-- [ ] Quando [edge case], então [comportamento esperado]
+- [ ] Quando [condição de erro / edge case], então [comportamento esperado]
 
 ## Definition of Done
 - [ ] Critérios de aceite verificados pelo PO Jr
-- [ ] Testes unitários cobrindo cenários de sucesso e erro
+- [ ] Testes cobrindo cenários de sucesso e erro
 - [ ] Code review aprovado
 - [ ] Sem regressão em testes existentes
 - [ ] Deploy em staging validado
