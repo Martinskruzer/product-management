@@ -27,7 +27,7 @@ Quando o usuário apresentar hipóteses, questione se são hipóteses reais (pod
 
 Pergunte ao usuário qual formato prefere:
 - **HTML Kruzer** ← padrão sugerido — documento visual completo no design system da Kruzer (consulte `design-kruzer.md`)
-- **Markdown** — para colar no ClickUp
+- **Markdown** — para colar no Jira
 - **Texto formatado** — para exportar como .docx ou Google Docs
 
 ---

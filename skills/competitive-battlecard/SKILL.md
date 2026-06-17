@@ -46,7 +46,7 @@ Perguntas que o vendedor pode fazer ao prospect para expor as fraquezas do conco
 
 Pergunte ao usuário qual formato prefere:
 - **HTML Kruzer** ← padrão sugerido — documento visual para consulta rápida (consulte `design-kruzer.md`)
-- **Markdown** — para colar no ClickUp ou CRM
+- **Markdown** — para colar no Jira ou CRM
 - **PDF** — para compartilhar com o time comercial
 
 ---

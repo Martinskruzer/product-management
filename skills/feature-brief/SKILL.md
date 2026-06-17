@@ -10,7 +10,7 @@ O Feature Brief é a versão mais enxuta da especificação de produto. Usado qu
 
 **Diferença do PRD:** O PRD é mais completo, usado para iniciativas novas ou complexas que passaram por discovery. O Feature Brief é mais direto — 1 página, escopo definido, foco nos critérios de aceite.
 
-**Gate de saída:** CPO aprova assincronamente em até 48h via ClickUp.
+**Gate de saída:** CPO aprova assincronamente em até 48h via Jira.
 
 ## Como conduzir
 
@@ -32,7 +32,7 @@ Se os critérios de aceite forem vagos ("funcionar bem", "ser rápido"), peça e
 
 Pergunte ao usuário qual formato prefere:
 - **HTML Kruzer** ← padrão sugerido — documento visual completo no design system da Kruzer (consulte `design-kruzer.md`)
-- **Markdown** — para colar no ClickUp
+- **Markdown** — para colar no Jira
 - **Texto formatado** — para exportar como .docx ou Google Docs
 
 ---

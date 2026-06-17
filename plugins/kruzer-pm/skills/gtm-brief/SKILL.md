@@ -52,7 +52,7 @@ Defina como medir sucesso e o cronograma.
 
 Pergunte ao usuário qual formato prefere:
 - **HTML Kruzer** ← padrão sugerido — documento visual completo no design system da Kruzer (consulte `design-kruzer.md`)
-- **Markdown** — para colar no ClickUp
+- **Markdown** — para colar no Jira
 - **Google Slides** — para apresentação (consulte `design-kruzer.md`)
 
 ---

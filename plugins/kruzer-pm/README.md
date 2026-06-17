@@ -19,7 +19,7 @@ Basta descrever o que você precisa em linguagem natural. O Claude lê a descri�
 | `feature-brief` | Features com escopo claro, sem discovery |
 | `priorizacao` | Sessões de priorização de backlog ou iniciativas |
 | `product-roadmap` | Criar ou atualizar o roadmap trimestral/semestral |
-| `user-stories` | Quebrar PRD/Feature Brief em tasks para ClickUp |
+| `user-stories` | Quebrar PRD/Feature Brief em tasks para Jira |
 | `discovery-brief` | Planejar a etapa de discovery |
 | `discovery-report` | Consolidar aprendizados do discovery |
 | `decision-record` | Registrar uma decisão no momento em que é tomada |

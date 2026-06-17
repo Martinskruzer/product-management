@@ -51,7 +51,7 @@ Diferencie explicitamente:
 
 Pergunte ao usuário qual formato prefere:
 - **HTML Kruzer** ← padrão sugerido — documento visual completo no design system da Kruzer (consulte `design-kruzer.md`)
-- **Markdown** — para colar no ClickUp
+- **Markdown** — para colar no Jira
 - **Google Slides** — para apresentação a stakeholders (consulte `design-kruzer.md` para padrão visual)
 
 ---
